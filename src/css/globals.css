@@ -1,12 +1,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #FFE6EE;
+  --secondary: #1c2e4a;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #FFE6EE;
+    --secondary: #2d4a78; 
   }
 }
 
@@ -39,4 +43,11 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
