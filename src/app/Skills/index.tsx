@@ -1,5 +1,6 @@
 import React from "react";
+import "./skills.css";
 
 export default function Skills() {
-  return <div id="skills">Skills</div>;
+  return <h1 id="skills">Skills</h1>;
 }

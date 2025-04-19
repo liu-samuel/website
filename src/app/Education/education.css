@@ -1,0 +1,27 @@
+#education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50vh;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  background-color: var(--primary);
+  border-radius: 20px;
+  color: var(--secondary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.education-item:hover {
+    background-color: #f5c6d8;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }

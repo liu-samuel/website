@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="about-container">
         <Image src={image} alt="Joanna Kil" />
-        <h1>Hi! My name is Joanna Kil and I'm a nursing student at the University of Toronto</h1>
+        <h2>Hi! My name is Joanna Kil and I'm a nursing student at the University of Toronto</h2>
     </div>
   )
 }

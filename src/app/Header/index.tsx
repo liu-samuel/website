@@ -11,6 +11,26 @@ export default function Header() {
     setMenuOpen(!menuOpen);
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute('href');
+    
+    if (href?.startsWith('#')) {
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        const headerHeight = document.querySelector('.header')?.clientHeight || 0;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        
+        setMenuOpen(false);
+      }
+    }
+  };
+
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -34,12 +54,12 @@ export default function Header() {
         
         <div className="dropdown-container">
           <nav className={`nav-menu dropdown ${menuOpen ? 'open' : ''}`}>
-            <a href="#about" onClick={toggleMenu}>About</a>
-            <a href="#education" onClick={toggleMenu}>Education</a>
-            <a href="#experience" onClick={toggleMenu}>Experience</a>
-            <a href="#skills" onClick={toggleMenu}>Skills</a>
-            <a href="#volunteering" onClick={toggleMenu}>Volunteering</a>
-            <a href="#contact" onClick={toggleMenu}>Contact</a>
+            <a href="#about" onClick={handleNavClick}>About</a>
+            <a href="#education" onClick={handleNavClick}>Education</a>
+            <a href="#experience" onClick={handleNavClick}>Experience</a>
+            <a href="#skills" onClick={handleNavClick}>Skills</a>
+            <a href="#volunteering" onClick={handleNavClick}>Volunteering</a>
+            <a href="#contact" onClick={handleNavClick}>Contact</a>
           </nav>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
+import "./experience.css";
 
 export default function Experience() {
-  return <div id="experience">Experience</div>;
+  return <h1 id="experience">Experience</h1>;
 }
