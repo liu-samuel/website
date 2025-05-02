@@ -5,9 +5,14 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="about-container">
+    <div id="about">
+      <div className="about-container">
         <Image src={image} alt="Joanna Kil" />
-        <h2>Hi! My name is Joanna Kil and I'm a nursing student at the University of Toronto</h2>
+        <div className="name-container">
+            <div className="name">Joanna Kil</div>
+            <div className="title">Nursing Student</div>
+        </div>
+      </div>
     </div>
   )
 }
