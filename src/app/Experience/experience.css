@@ -5,3 +5,15 @@
   justify-content: center;
   height: 100vh;
 }
+
+.experiences img {
+  width: 200px !important;
+  height: 100px !important; 
+  object-fit: contain !important; 
+}
+
+.experiences {
+  display: inline-block;
+  width: 50vw;
+  height: 25vh;
+}
